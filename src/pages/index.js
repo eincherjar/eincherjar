@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
 
 const IndexPage = () => (
   <>
-    <SEO title="Home"
+    <SEO title="Strona Główna"
       keywords={
         [`gatsby`, `application`, `react`]
       }

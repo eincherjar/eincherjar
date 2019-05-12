@@ -6,17 +6,12 @@ const StyledSection = styled.section`
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-gap: 4rem;
-    grid-auto-rows: 50vh;
+    /* grid-auto-rows: 50vh; */
     padding: 5vh 0;
     font-family: "Montserrat", sans-serif;
 
-    :last-child {
-        grid-auto-rows: auto;
-    }
-
     @media (max-width: 320px) {
         grid-gap: 2rem;
-        grid-auto-rows: auto;
     }
 `
 
@@ -46,7 +41,6 @@ const StyledLink = styled(Link)`
 
         @media (max-width: 320px) {
             grid-column: span 10;
-             grid-row: auto;
         }
     }
 
@@ -56,17 +50,17 @@ const StyledLink = styled(Link)`
 
         @media (max-width: 320px) {
             grid-column: span 10;
-             grid-row: auto;
         }
     }
     
     :nth-child(4) {
         grid-column: span 10;
         grid-row: 3;
+        height: 50vh;
 
         @media (max-width: 320px) {
             grid-column: span 10;
-            grid-row: auto;
+            height: auto;
         }
     }
 
@@ -100,6 +94,7 @@ const StyledTitle = styled.h3`
     font-weight: bold;
     margin: 0;
 `
+
 const StyledBtn = styled(Link)`
     text-decoration: none;
     font-weight: bold;
@@ -175,7 +170,7 @@ const Portfolio = () => (
                 <StyledTitle>Holver</StyledTitle>
             </StyledOverlay>
         </StyledLink>
-        <StyledBtn to="/">Zobacz więcej</StyledBtn>
+        <StyledBtn to="/works">Zobacz więcej</StyledBtn>
     </StyledSection>
 )
 

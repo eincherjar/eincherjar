@@ -152,21 +152,20 @@ const Nav = () => (
         <StyledLogo>Eincherjar</StyledLogo>
         <StyledNavbar>
             <StyledDesktop>
-                <StyledLink to="/" isActive>Home</StyledLink>
+                <StyledLink to="/" isActive>Strona Główna</StyledLink>
                 <StyledLink to="/#portfolio">Portfolio</StyledLink>
-                <StyledLink to="/">O mnie</StyledLink>
-                <StyledLink to="/"> News </StyledLink>
-                <StyledLink to="/">Kontakt</StyledLink>
+                <StyledLink to="/#about">O mnie</StyledLink>
+                {/* <StyledLink to="/">News </StyledLink> */}
+                <StyledLink to="/#contact">Kontakt</StyledLink>
             </StyledDesktop>
             <StyledMobile id="mobile__menu">
                 <StyledClose onClick={closeNav}>&times;</StyledClose>
                 <StyledContent>
-                    <StyledMobileLink to="/" isActive onClick={closeNav}>Home</StyledMobileLink>
                     <StyledMobileLink to="/#portfolio"
                         onClick={closeNav}>Portfolio</StyledMobileLink>
-                    <StyledMobileLink to="/" onClick={closeNav}>O mnie</StyledMobileLink>
-                    <StyledMobileLink to="/" onClick={closeNav}> News </StyledMobileLink>
-                    <StyledMobileLink to="/" onClick={closeNav}>Kontakt</StyledMobileLink>
+                    <StyledMobileLink to="/#about" onClick={closeNav}>O mnie</StyledMobileLink>
+                    {/* <StyledMobileLink to="/" onClick={closeNav}>News </StyledMobileLink> */}
+                    <StyledMobileLink to="/#contact" onClick={closeNav}>Kontakt</StyledMobileLink>
                 </StyledContent>
             </StyledMobile>
             <StyledMenu onClick={openNav}>&#9776;</StyledMenu>
