@@ -24,7 +24,7 @@ const StyledTitle = styled.h2`
 `
 
 const StyledForm = styled.form`
-    width: 50%;
+    width: 70%;
     margin: 7rem 0;
 
     @media (max-width: 320px) {
