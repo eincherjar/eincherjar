@@ -16,7 +16,7 @@ const PosedH2 = posed.h2({
   enter: {
     opacity: 1,
     y: 0,
-    delay: 1000,
+    delay: 1500,
   },
 })
 
@@ -43,6 +43,7 @@ const StyledSubtitle = styled(PosedH2)`
   font-weight: 300;
   width: 50%;
   letter-spacing: 0;
+  opacity: 0;
 
   @media (max-width: 320px) {
     text-align: center;

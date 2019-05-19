@@ -105,7 +105,7 @@ const Contact = () => (
     <StyledForm
       name="contact"
       method="post"
-      action="/success"
+      action="/"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
