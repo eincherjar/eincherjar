@@ -81,7 +81,7 @@ const StyledTextarea = styled.textarea`
   }
 `
 
-const button = styled.button`
+const StyledBtn = styled.button`
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
@@ -141,9 +141,7 @@ const Contact = () => (
           placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, sed?"
         />
       </StyledGroup>
-      <button type="submit" class="btn">
-        Wyślij
-      </button>
+      <StyledBtn type="submit">Wyślij</StyledBtn>
     </StyledForm>
   </StyledSection>
 )
