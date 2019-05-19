@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Icons from "./icons"
 import { colors } from "../utils/colors"
+import Slide from "react-reveal/Slide"
 
 const StyledSection = styled.section`
   padding: 5vh 0;
@@ -70,7 +71,9 @@ const StyledBar = styled.div`
 `
 const About = () => (
   <StyledSection id="about">
-    <StyledTitle>O Mnie</StyledTitle>
+    <Slide right>
+      <StyledTitle>O Mnie</StyledTitle>
+    </Slide>
     <StyledH3>
       Tworzę responsywne strony internetowe, które są dostosowane do urządzeń
       mobilnych. Strony statyczne jak CMS mogą być opartę o gotowy projekt

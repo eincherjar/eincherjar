@@ -4,6 +4,8 @@ import styled from "styled-components"
 import { colors } from "../utils/colors"
 import Projects from "../utils/Projects.json"
 import Img from "gatsby-image"
+import Zoom from "react-reveal/Zoom"
+import Slide from "react-reveal/Slide"
 
 const StyledSection = styled.section`
   display: flex;
@@ -139,31 +141,35 @@ const Portfolio = () => (
     `}
     render={data => (
       <StyledSection id="portfolio">
-        <StyledMainTitle>Projekty</StyledMainTitle>
-        {data.allFile.edges.map((item, i) => (
-          <StyledWrapper>
-            <StyledImage fluid={item.node.childImageSharp.fluid} order={i} />
-            <StyledContent order={i}>
-              {Projects.filter(x => x.name === item.node.name).map(title => {
-                return <StyledTitle>{title.title}</StyledTitle>
-              })}
+        <Slide left>
+          <StyledMainTitle>Projekty</StyledMainTitle>
+        </Slide>
+        <Zoom>
+          {data.allFile.edges.map((item, i) => (
+            <StyledWrapper>
+              <StyledImage fluid={item.node.childImageSharp.fluid} order={i} />
+              <StyledContent order={i}>
+                {Projects.filter(x => x.name === item.node.name).map(title => {
+                  return <StyledTitle>{title.title}</StyledTitle>
+                })}
 
-              {Projects.filter(x => x.name === item.node.name).map(
-                description => {
-                  return (
-                    <StyledDescription>
-                      {description.description}
-                    </StyledDescription>
-                  )
-                }
-              )}
+                {Projects.filter(x => x.name === item.node.name).map(
+                  description => {
+                    return (
+                      <StyledDescription>
+                        {description.description}
+                      </StyledDescription>
+                    )
+                  }
+                )}
 
-              {Projects.filter(x => x.name === item.node.name).map(url => {
-                return <StyledBtn to={url.url}>Zobacz więcej</StyledBtn>
-              })}
-            </StyledContent>
-          </StyledWrapper>
-        ))}
+                {Projects.filter(x => x.name === item.node.name).map(url => {
+                  return <StyledBtn to={url.url}>Zobacz więcej</StyledBtn>
+                })}
+              </StyledContent>
+            </StyledWrapper>
+          ))}
+        </Zoom>
       </StyledSection>
     )}
   />
