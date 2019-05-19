@@ -16,7 +16,7 @@ const PosedH2 = posed.h2({
   enter: {
     opacity: 1,
     y: 0,
-    delay: 2500,
+    delay: 500,
   },
 })
 
@@ -52,7 +52,7 @@ const StyledSubtitle = styled(PosedH2)`
 
 const Hero = () => (
   <StyledHero>
-    <Typing speed={20}>
+    <Typing speed={50}>
       <Typing.Delay ms={500} />
       <StyledTitle>
         Witaj, <br /> jestem Marcin
