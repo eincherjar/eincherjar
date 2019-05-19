@@ -54,7 +54,7 @@ const StyledSubtitle = styled(PosedH2)`
 const Hero = () => (
   <StyledHero>
     <Typing speed={80}>
-      <Typing.Delay ms={300} />
+      <Typing.Delay ms={200} />
       <StyledTitle>
         Witaj, <br /> jestem Marcin
       </StyledTitle>
