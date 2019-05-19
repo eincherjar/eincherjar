@@ -16,7 +16,7 @@ const PosedH2 = posed.h2({
   enter: {
     opacity: 1,
     y: 0,
-    delay: 1500,
+    delay: 1800,
   },
 })
 
