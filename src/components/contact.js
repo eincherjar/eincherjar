@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { colors } from "../utils/colors"
 
 const StyledSection = styled.section`
     padding: 5vh 0;
@@ -17,6 +18,18 @@ const StyledTitle = styled.h2`
     line-height: 1.875rem;
     text-align: left;
     width: 100%;
+    position: relative;
+
+  ::after {
+    content: "KONTAKT";
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    color: ${colors.secondary};
+    z-index: -1;
+    font-size: 16rem;
+    opacity: .2;
+  }
 
     @media (max-width: 320px) {
         text-align: center;   
@@ -74,15 +87,15 @@ const StyledBtn = styled.button`
     text-transform: uppercase;
     padding: 1rem 3rem;
     color: #fff;
-    background: rgb(12, 0, 255);
-    border: .2rem solid rgb(12, 0, 255);
+    background: ${colors.dark};
+    border: .2rem solid ${colors.dark};
     text-align: center;
     transition: all .4s ease-in-out;
     cursor: pointer;
 
     :hover {
         background: transparent;
-        color: rgb(12, 0, 255);
+        color: ${colors.dark};
     }
 `
 

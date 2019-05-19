@@ -1,66 +1,88 @@
 import React from "react"
 import styled from "styled-components"
+import Icons from "./icons"
+import { colors } from "../utils/colors"
 
 const StyledSection = styled.section`
-    padding: 5vh 0;
-    font-family: "Montserrat", sans-serif;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-gap: 4rem;
-    grid-template-rows: 1fr;
-    padding-bottom: 7rem;
+  padding: 5vh 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
 `
+
+// const StyledWrapper = styled.div`
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   grid-gap: 4rem;
+
+//   @media (max-width: 320px) {
+//     grid-template-columns: 1fr;
+//   }
+// `
 
 const StyledTitle = styled.h2`
-    font-size: 4.8rem;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 1.875rem;
-    text-align: left;
-    grid-column: 1 / 11;
-    margin-bottom: 5rem;
+  font-size: 4.8rem;
+  color: ${colors.dark};
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 4.875rem;
+  text-align: left;
+  grid-column: span 2;
+  margin-bottom: 15rem;
+  position: relative;
 
-    @media (max-width: 320px) {
-        text-align: center;   
-    }
-`
+  ::after {
+    content: "O MNIE";
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    color: ${colors.secondary};
+    z-index: -1;
+    font-size: 16rem;
+    opacity: 0.2;
+  }
 
-const StyledText = styled.div`
-    grid-column: 1 / 6;
-`
-
-const StyledH2 = styled.h2`
-    font-size: 4rem;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    margin: 0;
-    letter-spacing: .1px;
+  @media (max-width: 320px) {
+    text-align: center;
+  }
 `
 
 const StyledH3 = styled.h3`
-    font-size: 1.6rem;
-    color: rgb(153, 153, 153);
-    padding: 0;
-    letter-spacing: .1px;
-    text-align: justify;
-    font-family: "Roboto";
-    font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 3rem;
+  color: ${colors.secondary};
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.1px;
+  text-align: center;
+  font-weight: 400;
+  width: 70%;
+  align-self: center;
 `
 
-const StyledFeatures = styled.div`
-    grid-column: 6 / 11;
-    `
-
+const StyledBar = styled.div`
+  grid-column-start: span 2;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 10%;
+`
 const About = () => (
-    <StyledSection id="about">
-        <StyledTitle>O Mnie</StyledTitle>
-        <StyledText>
-            <StyledH2>Marcin Barszcz</StyledH2>
-            <StyledH3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam provident aliquid quos qui expedita sint, labore saepe deserunt quidem consequatur velit libero quod dolore dicta quis. Cupiditate, et. Eum, mollitia?</StyledH3>
-        </StyledText>
-        <StyledFeatures>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum perferendis vitae voluptatem, quos provident animi quis eius non. Tempora ea amet, aliquam quae molestias rerum voluptatibus aut quo debitis assumenda.</StyledFeatures>
-    </StyledSection>
+  <StyledSection id="about">
+    <StyledTitle>O Mnie</StyledTitle>
+    <StyledH3>
+      Tworzę responsywne strony internetowe, które są dostosowane do urządzeń
+      mobilnych. Strony statyczne jak CMS mogą być opartę o gotowy projekt
+      dostarczony przez klienta, ale również mogę zaproponować zaprojektowanie i
+      wdrożenie oryginalnego wyglądu. Jestem w stanie dostarczam w pełni
+      spersonalizowany autorski system zarządzania treścią, który posiada
+      wszystkie wymagadne przez klienta funkcji.
+    </StyledH3>
+    <StyledBar>
+      <Icons />
+    </StyledBar>
+  </StyledSection>
 )
 
 export default About

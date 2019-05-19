@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&subset=latin-ext');
   *, ::after, ::before {
     box-sizing: border-box;
+    outline: none;
   }
   html {
     font-size: 62.5%;
@@ -24,11 +25,7 @@ const GlobalStyle = createGlobalStyle`
 
 const IndexPage = () => (
   <>
-    <SEO title="Strona Główna"
-      keywords={
-        [`gatsby`, `application`, `react`]
-      }
-    />
+    <SEO title="Strona Główna" keywords={[`gatsby`, `application`, `react`]} />
     <GlobalStyle />
     <Header title="Helo, Helo" />
     <Main />
