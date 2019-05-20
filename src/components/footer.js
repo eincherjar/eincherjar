@@ -72,27 +72,21 @@ const Footer = () => (
   <StaticQuery
     query={graphql`
       query socialImages {
-        facebook: allFile(
-          filter: { name: {eq : "facebook"} },
-        ) {
+        facebook: allFile(filter: { name: { eq: "facebook" } }) {
           edges {
             node {
               publicURL
             }
           }
         }
-  linkedin: allFile(
-          filter: { name: {eq : "linkedin"} },
-        ) {
+        linkedin: allFile(filter: { name: { eq: "linkedin" } }) {
           edges {
             node {
               publicURL
             }
           }
         }
-  github: allFile(
-          filter: { name: {eq : "github"} },
-        ) {
+        github: allFile(filter: { name: { eq: "github" } }) {
           edges {
             node {
               publicURL
@@ -108,20 +102,20 @@ const Footer = () => (
           Reserved.
         </StyledP>
         <div>
-        <StyledLink to="https://www.facebook.com">
-          {data.facebook.edges.map(({ node }) => (
+          <StyledLink to="https://www.facebook.com/einherjar.x">
+            {data.facebook.edges.map(({ node }) => (
               <StyledIcon src={node.publicURL} alt="facebook logo" />
-          ))}
+            ))}
           </StyledLink>
-          <StyledLink to="https://pl.linkedin.com/">
-          {data.linkedin.edges.map(({ node }) => (
+          <StyledLink to="https://www.linkedin.com/in/marcin-barszcz-1a4686182/">
+            {data.linkedin.edges.map(({ node }) => (
               <StyledIcon src={node.publicURL} alt="facebook logo" />
-          ))}
+            ))}
           </StyledLink>
           <StyledLink to="https://github.com/eincherjar">
-          {data.github.edges.map(({ node }) => (
+            {data.github.edges.map(({ node }) => (
               <StyledIcon src={node.publicURL} alt="facebook logo" />
-          ))}
+            ))}
           </StyledLink>
         </div>
         <StyledBtn to="/">&#8593;</StyledBtn>
