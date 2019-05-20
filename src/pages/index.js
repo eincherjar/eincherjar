@@ -8,6 +8,7 @@ import Footer from "../components/footer"
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&subset=latin-ext');
+  @import url('https://fonts.googleapis.com/css?family=Raleway:300,400&display=swap&subset=latin-ext');
   *, ::after, ::before {
     box-sizing: border-box;
     outline: none;

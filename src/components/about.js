@@ -77,12 +77,11 @@ const About = () => (
     </Slide>
     <StyledH3>
       <Bounce top>
-        Tworzę responsywne strony internetowe, które są dostosowane do urządzeń
-        mobilnych. Strony statyczne jak CMS mogą być opartę o gotowy projekt
-        dostarczony przez klienta, ale również mogę zaproponować zaprojektowanie
-        i wdrożenie oryginalnego wyglądu. Jestem w stanie dostarczam w pełni
-        spersonalizowany autorski system zarządzania treścią, który posiada
-        wszystkie wymagadne przez klienta funkcji.
+        Nazywam się Marcin Barszcz, jestem absolwentem studiów magisterskich na
+        Politechnice Rzeszowskiej im. Ignacego Łukasiewicza i tworzę strony
+        internetowe. Dostarczam nie tylko strony statyczne ale również aplikacje
+        internetowe dostosowane do klienta. Posiadam autorski system zarządzania
+        treścią dostosowywany do indywidualnych wymagań klienta.
       </Bounce>
     </StyledH3>
     <StyledBar>

@@ -22,12 +22,12 @@ const PosedH2 = posed.h2({
 
 const StyledTitle = styled.h1`
   font-size: 8rem;
+  line-height: 9rem;
   color: rgb(0, 0, 0);
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 7rem;
   letter-spacing: 0;
-  margin-bottom: 3rem;
+  margin: 0;
 
   @media (max-width: 320px) {
     font-size: 2.8rem;
@@ -37,11 +37,12 @@ const StyledTitle = styled.h1`
 `
 
 const StyledSubtitle = styled(PosedH2)`
-  font-size: 1.6rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 3.6rem;
   color: rgb(153, 153, 153);
-  line-height: 2.5rem;
+  line-height: 4.5rem;
   font-weight: 300;
-  width: 50%;
+  /* width: 55%; */
   letter-spacing: 0;
   opacity: 0;
 
@@ -56,12 +57,11 @@ const Hero = () => (
     <Typing speed={80}>
       <Typing.Delay ms={200} />
       <StyledTitle>
-        Witaj, <br /> jestem Marcin
+        Hej, <br /> jestem Marcin
       </StyledTitle>
     </Typing>
     <StyledSubtitle initialPose="exit" pose="enter">
-      Hi, my name is Rick Harrison. I'm a canadian designer based in Toronto. I
-      love typography.
+      Tworzę strony www dostosowane do każdego klienta
     </StyledSubtitle>
   </StyledHero>
 )
