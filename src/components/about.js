@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Icons from "./icons"
 import { colors } from "../utils/colors"
 import Slide from "react-reveal/Slide"
+import Bounce from "react-reveal/Bounce"
 
 const StyledSection = styled.section`
   padding: 5vh 0;
@@ -49,13 +50,13 @@ const StyledTitle = styled.h2`
 `
 
 const StyledH3 = styled.h3`
-  font-size: 2.2rem;
-  line-height: 3rem;
+  font-size: 1.85rem;
+  line-height: 2.8rem;
   color: ${colors.secondary};
   padding: 0;
   margin: 0;
   letter-spacing: 0.1px;
-  text-align: center;
+  text-align: justify;
   font-weight: 400;
   width: 70%;
   align-self: center;
@@ -75,12 +76,14 @@ const About = () => (
       <StyledTitle>O Mnie</StyledTitle>
     </Slide>
     <StyledH3>
-      Tworzę responsywne strony internetowe, które są dostosowane do urządzeń
-      mobilnych. Strony statyczne jak CMS mogą być opartę o gotowy projekt
-      dostarczony przez klienta, ale również mogę zaproponować zaprojektowanie i
-      wdrożenie oryginalnego wyglądu. Jestem w stanie dostarczam w pełni
-      spersonalizowany autorski system zarządzania treścią, który posiada
-      wszystkie wymagadne przez klienta funkcji.
+      <Bounce top>
+        Tworzę responsywne strony internetowe, które są dostosowane do urządzeń
+        mobilnych. Strony statyczne jak CMS mogą być opartę o gotowy projekt
+        dostarczony przez klienta, ale również mogę zaproponować zaprojektowanie
+        i wdrożenie oryginalnego wyglądu. Jestem w stanie dostarczam w pełni
+        spersonalizowany autorski system zarządzania treścią, który posiada
+        wszystkie wymagadne przez klienta funkcji.
+      </Bounce>
     </StyledH3>
     <StyledBar>
       <Icons />

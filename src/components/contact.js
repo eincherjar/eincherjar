@@ -1,13 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 import { colors } from "../utils/colors"
+import Slide from "react-reveal/Slide"
+import Flip from "react-reveal/Flip"
 
 const StyledSection = styled.section`
   padding: 5vh 0;
   font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 `
 
 const StyledTitle = styled.h2`
@@ -15,7 +17,8 @@ const StyledTitle = styled.h2`
   color: rgb(0, 0, 0);
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.875rem;
+  line-height: 4.875rem;
+  margin-bottom: 15rem;
   text-align: left;
   width: 100%;
   position: relative;
@@ -37,8 +40,8 @@ const StyledTitle = styled.h2`
 `
 
 const StyledForm = styled.form`
-  width: 70%;
   margin: 7rem 0;
+  align-self: center;
 
   @media (max-width: 320px) {
     width: 100%;
@@ -92,6 +95,8 @@ const StyledBtn = styled.button`
   text-align: center;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
+  display: block;
+  margin-left: auto;
 
   :hover {
     background: transparent;
@@ -101,48 +106,52 @@ const StyledBtn = styled.button`
 
 const Contact = () => (
   <StyledSection id="contact">
-    <StyledTitle>Kontakt</StyledTitle>
-    <StyledForm
-      name="contact"
-      method="post"
-      action="/"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-    >
-      <input type="hidden" name="bot-field" />
-      <input type="hidden" name="form-name" value="contact" />
+    <Slide left>
+      <StyledTitle>Kontakt</StyledTitle>
+    </Slide>
+    <Flip left>
+      <StyledForm
+        name="contact"
+        method="post"
+        action="/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
 
-      <StyledGroup>
-        <StyledLabel htmlFor="name">Imię i nazwisko</StyledLabel>
-        <StyledInput
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Jan Kowalski"
-        />
-      </StyledGroup>
+        <StyledGroup>
+          <StyledLabel htmlFor="name">Imię i nazwisko</StyledLabel>
+          <StyledInput
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Jan Kowalski"
+          />
+        </StyledGroup>
 
-      <StyledGroup>
-        <StyledLabel htmlFor="email">Email</StyledLabel>
-        <StyledInput
-          type="text"
-          name="email"
-          id="email"
-          placeholder="jankowalski@mail.com"
-        />
-      </StyledGroup>
+        <StyledGroup>
+          <StyledLabel htmlFor="email">Email</StyledLabel>
+          <StyledInput
+            type="text"
+            name="email"
+            id="email"
+            placeholder="jankowalski@mail.com"
+          />
+        </StyledGroup>
 
-      <StyledGroup>
-        <StyledLabel htmlFor="message">Wiadomość</StyledLabel>
-        <StyledTextarea
-          name="message"
-          id="message"
-          rows="3"
-          placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, sed?"
-        />
-      </StyledGroup>
-      <StyledBtn type="submit">Wyślij</StyledBtn>
-    </StyledForm>
+        <StyledGroup>
+          <StyledLabel htmlFor="message">Wiadomość</StyledLabel>
+          <StyledTextarea
+            name="message"
+            id="message"
+            rows="3"
+            placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, sed?"
+          />
+        </StyledGroup>
+        <StyledBtn type="submit">Wyślij</StyledBtn>
+      </StyledForm>
+    </Flip>
   </StyledSection>
 )
 

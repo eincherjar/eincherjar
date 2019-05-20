@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import Bounce from "react-reveal/Bounce"
 
 const StyledIcon = styled.img`
   height: 6rem;
@@ -34,7 +35,9 @@ const Icons = () => (
     render={data => (
       <>
         {data.source.edges.map(({ node }) => (
-          <StyledIcon src={node.publicURL} alt="icon" />
+          <Bounce bottom delay={500}>
+            <StyledIcon src={node.publicURL} alt="icon" />
+          </Bounce>
         ))}
       </>
     )}
