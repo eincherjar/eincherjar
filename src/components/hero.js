@@ -7,7 +7,7 @@ const StyledHero = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 30vh 0 15vh 0;
+  margin: 15vh 0;
   font-family: "Montserrat", sans-serif;
 `
 
@@ -30,8 +30,8 @@ const StyledTitle = styled.h1`
   margin: 0;
 
   @media (max-width: 320px) {
-    font-size: 2.8rem;
-    line-height: 3rem;
+    font-size: 6rem;
+    line-height: 5rem;
     text-align: center;
   }
 `
@@ -49,6 +49,9 @@ const StyledSubtitle = styled(PosedH2)`
   @media (max-width: 320px) {
     text-align: center;
     width: 100%;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-top: 10vh;
   }
 `
 

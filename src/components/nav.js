@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import Logo from "../images/logo.svg"
+import { colors } from "../utils/colors"
 
 const StyledNav = styled.nav`
   font-family: "Roboto", sans-serif;
@@ -13,7 +14,7 @@ const StyledNav = styled.nav`
 
 const StyledLogo = styled(Link)`
   font-size: 2rem;
-  color: rgb(0, 0, 0);
+  color: ${colors.dark};
   font-weight: bold;
   text-transform: uppercase;
   transition: all 0.5s ease-in-out;

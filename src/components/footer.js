@@ -31,7 +31,7 @@ const StyledSpan = styled(Link)`
   transition: all 0.4s ease-in;
 
   :hover {
-    color: ${colors.primary};
+    color: ${colors.secondary};
   }
 `
 
@@ -41,7 +41,7 @@ const StyledIcon = styled.img`
   transition: all 0.5s ease-in-out;
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   text-decoration: none;
   margin: 0 1rem;
 
@@ -102,17 +102,23 @@ const Footer = () => (
           Reserved.
         </StyledP>
         <div>
-          <StyledLink to="https://www.facebook.com/einherjar.x">
+          <StyledLink
+            href="https://www.facebook.com/einherjar.x"
+            target="_blank"
+          >
             {data.facebook.edges.map(({ node }) => (
               <StyledIcon src={node.publicURL} alt="facebook logo" />
             ))}
           </StyledLink>
-          <StyledLink to="https://www.linkedin.com/in/marcin-barszcz-1a4686182/">
+          <StyledLink
+            href="https://www.linkedin.com/in/marcin-barszcz-1a4686182/"
+            target="_blank"
+          >
             {data.linkedin.edges.map(({ node }) => (
               <StyledIcon src={node.publicURL} alt="facebook logo" />
             ))}
           </StyledLink>
-          <StyledLink to="https://github.com/eincherjar">
+          <StyledLink href="https://github.com/eincherjar" target="_blank">
             {data.github.edges.map(({ node }) => (
               <StyledIcon src={node.publicURL} alt="facebook logo" />
             ))}

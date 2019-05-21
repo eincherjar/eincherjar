@@ -32,10 +32,18 @@ const StyledTitle = styled.h2`
     z-index: -1;
     font-size: 16rem;
     opacity: 0.2;
+
+    @media (max-width: 320px) {
+      top: 1rem;
+      left: 1rem;
+      font-size: 5rem;
+    }
   }
 
   @media (max-width: 320px) {
     text-align: center;
+    line-height: 0;
+    margin-bottom: 8rem;
   }
 `
 

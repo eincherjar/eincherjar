@@ -42,10 +42,18 @@ const StyledTitle = styled.h2`
     z-index: -1;
     font-size: 16rem;
     opacity: 0.2;
+
+    @media (max-width: 320px) {
+      top: 1rem;
+      left: 6rem;
+      font-size: 5rem;
+    }
   }
 
   @media (max-width: 320px) {
     text-align: center;
+    line-height: 0;
+    margin-bottom: 8rem;
   }
 `
 
@@ -60,6 +68,13 @@ const StyledH3 = styled.h3`
   font-weight: 400;
   width: 70%;
   align-self: center;
+
+  @media (max-width: 320px) {
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
 `
 
 const StyledBar = styled.div`

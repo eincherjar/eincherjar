@@ -15,6 +15,11 @@ const StyledIcon = styled.img`
     margin-top: -2rem;
     opacity: 1;
   }
+
+  @media (max-width: 320px) {
+    height: 4rem;
+    margin: 1rem;
+  }
 `
 
 const Icons = () => (

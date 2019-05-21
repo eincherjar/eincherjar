@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql, Link } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import { colors } from "../utils/colors"
 import Projects from "../utils/Projects.json"
@@ -34,6 +34,12 @@ const StyledMainTitle = styled.h2`
     z-index: -1;
     font-size: 16rem;
     opacity: 0.2;
+
+    @media (max-width: 320px) {
+      top: 1rem;
+      left: 1rem;
+      font-size: 5rem;
+    }
   }
 
   @media (max-width: 320px) {
@@ -97,7 +103,7 @@ const StyledDescription = styled.h5`
   } */
 `
 
-const StyledBtn = styled(Link)`
+const StyledBtn = styled.a`
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
@@ -164,7 +170,11 @@ const Portfolio = () => (
                 )}
 
                 {Projects.filter(x => x.name === item.node.name).map(url => {
-                  return <StyledBtn to={url.url}>Zobacz więcej</StyledBtn>
+                  return (
+                    <StyledBtn href={url.url} target="_blank">
+                      Zobacz więcej
+                    </StyledBtn>
+                  )
                 })}
               </StyledContent>
             </StyledWrapper>
