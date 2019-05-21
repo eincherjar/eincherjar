@@ -7,8 +7,12 @@ const StyledHero = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 15vh 0;
+  margin: 30vh 15vw;
   font-family: "Montserrat", sans-serif;
+
+  @media (max-width: 320px) {
+    margin: 15vh 0;
+  }
 `
 
 const PosedH2 = posed.h2({
